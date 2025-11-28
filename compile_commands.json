@@ -1,0 +1,50 @@
+[
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/meson-generated_.._xclicker-resources.c.o -MF src/xclicker.p/meson-generated_.._xclicker-resources.c.o.d -o src/xclicker.p/meson-generated_.._xclicker-resources.c.o -c src/xclicker-resources.c",
+    "file": "src/xclicker-resources.c",
+    "output": "src/xclicker.p/meson-generated_.._xclicker-resources.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/main.c.o -MF src/xclicker.p/main.c.o.d -o src/xclicker.p/main.c.o -c ../src/main.c",
+    "file": "../src/main.c",
+    "output": "src/xclicker.p/main.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/xclicker-app.c.o -MF src/xclicker.p/xclicker-app.c.o.d -o src/xclicker.p/xclicker-app.c.o -c ../src/xclicker-app.c",
+    "file": "../src/xclicker-app.c",
+    "output": "src/xclicker.p/xclicker-app.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/config.c.o -MF src/xclicker.p/config.c.o.d -o src/xclicker.p/config.c.o -c ../src/config.c",
+    "file": "../src/config.c",
+    "output": "src/xclicker.p/config.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/mainwin.c.o -MF src/xclicker.p/mainwin.c.o.d -o src/xclicker.p/mainwin.c.o -c ../src/mainwin.c",
+    "file": "../src/mainwin.c",
+    "output": "src/xclicker.p/mainwin.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/x11api.c.o -MF src/xclicker.p/x11api.c.o.d -o src/xclicker.p/x11api.c.o -c ../src/x11api.c",
+    "file": "../src/x11api.c",
+    "output": "src/xclicker.p/x11api.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/settings.c.o -MF src/xclicker.p/settings.c.o.d -o src/xclicker.p/settings.c.o -c ../src/settings.c",
+    "file": "../src/settings.c",
+    "output": "src/xclicker.p/settings.c.o"
+  },
+  {
+    "directory": "/home/jaynorton17/xclicker/build",
+    "command": "cc -Isrc/xclicker.p -Isrc -I../src -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -O0 -g -Wno-incompatible-pointer-types -pthread -MD -MQ src/xclicker.p/utils.c.o -MF src/xclicker.p/utils.c.o.d -o src/xclicker.p/utils.c.o -c ../src/utils.c",
+    "file": "../src/utils.c",
+    "output": "src/xclicker.p/utils.c.o"
+  }
+]

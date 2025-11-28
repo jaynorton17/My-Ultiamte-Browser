@@ -1,0 +1,12 @@
+{
+  "name": "quad-browser-v14-1-electron",
+  "version": "1.0.1",
+  "description": "Quad Browser V14.1 - frameless stable Electron browser with control remote",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --disable-gpu --disable-software-rasterizer --no-sandbox"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0"
+  }
+}

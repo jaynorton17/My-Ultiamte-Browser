@@ -1,0 +1,250 @@
+Build started at 2025-11-27T00:43:34.545981
+Main binary: /usr/bin/python3
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 1.0.1
+Source dir: /home/jaynorton17/xclicker
+Build dir: /home/jaynorton17/xclicker/build
+Build type: native build
+Project name: XClicker
+Project version: undefined
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version']>
+linker stdout:
+GNU ld (GNU Binutils for Debian) 2.40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 12.2.0
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccanplBi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/jaynorton17/xclicker/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 12.2.0 "cc (Debian 12.2.0-14+deb12u1) 12.2.0")
+C linker for the host machine: cc ld.bfd 2.40
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version']>
+linker stdout:
+GNU ld (GNU Binutils for Debian) 2.40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 12.2.0
+/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJXcqjC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/jaynorton17/xclicker/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 12.2.0 "cc (Debian 12.2.0-14+deb12u1) 12.2.0")
+C linker for the build machine: cc ld.bfd 2.40
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Pkg-config binary for 1 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.8.1)
+Determining dependency 'gtk+-3.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion gtk+-3.0` -> 0
+stdout:
+3.24.38
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags gtk+-3.0` -> 0
+stdout:
+-I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/gio-unix-2.0 -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -pthread
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs gtk+-3.0` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lgtk-3 -lgdk-3 -lz -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs gtk+-3.0` -> 0
+stdout:
+-lgtk-3 -lgdk-3 -lz -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+-----------
+Running compile:
+Working directory:  /home/jaynorton17/xclicker/build/meson-private/tmpum_c37cp
+Command line:  cc /home/jaynorton17/xclicker/build/meson-private/tmpum_c37cp/testfile.c -o /home/jaynorton17/xclicker/build/meson-private/tmpum_c37cp/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/jaynorton17/xclicker/build/meson-private/tmpvqh7n5tz
+Command line:  cc /home/jaynorton17/xclicker/build/meson-private/tmpvqh7n5tz/testfile.c -o /home/jaynorton17/xclicker/build/meson-private/tmpvqh7n5tz/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/12/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/12/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/12/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency gtk+-3.0 found: YES 3.24.38
+Pkg-config binary for 1 is cached.
+Determining dependency 'x11' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion x11` -> 0
+stdout:
+1.8.4
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags x11` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs x11` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lX11
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs x11` -> 0
+stdout:
+-lX11
+-----------
+Run-time dependency x11 found: YES 1.8.4
+Pkg-config binary for 1 is cached.
+Determining dependency 'xi' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xi` -> 0
+stdout:
+1.8
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xi` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xi` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lXi
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xi` -> 0
+stdout:
+-lXi
+-----------
+Run-time dependency xi found: YES 1.8
+Pkg-config binary for 1 is cached.
+Determining dependency 'xtst' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion xtst` -> 0
+stdout:
+1.2.3
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags xtst` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xtst` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lXtst
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs xtst` -> 0
+stdout:
+-lXtst
+-----------
+Run-time dependency xtst found: YES 1.2.3
+Pkg-config binary for 0 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.8.1)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+stdout:
+2.74.6
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+stdout:
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+stdout:
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+-----------
+env[PKG_CONFIG_PATH]: 
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+stdout:
+-lglib-2.0
+-----------
+Program glib-compile-resources found: YES (/usr/bin/glib-compile-resources)
+Build targets in project: 3
+
+Found ninja-1.11.1 at /usr/bin/ninja

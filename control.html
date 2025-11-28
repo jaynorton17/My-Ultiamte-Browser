@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Quad Controls</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+    label {
+      font-size: 13px;
+    }
+    select, input[type="text"], button {
+      width: 100%;
+      margin: 4px 0;
+      padding: 4px;
+      font-size: 13px;
+      box-sizing: border-box;
+    }
+    .section {
+      border: 1px solid #444;
+      padding: 6px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+    }
+    .row {
+      display: flex;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .row button {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quad Browser V14.1</h1>
+
+  <div class="section">
+    <label for="screenCount">Screens (1–5):</label>
+    <select id="screenCount">
+      <option value="1">1 Screen</option>
+      <option value="2">2 Screens</option>
+      <option value="3">3 Screens</option>
+      <option value="4" selected>4 Screens</option>
+      <option value="5">5 Screens</option>
+    </select>
+    <button id="applyScreens">Apply Layout</button>
+  </div>
+
+  <div class="section">
+    <label for="screenIndex">Screen index (0–4):</label>
+    <select id="screenIndex">
+      <option value="0">Screen 0</option>
+      <option value="1">Screen 1</option>
+      <option value="2">Screen 2</option>
+      <option value="3">Screen 3</option>
+      <option value="4">Screen 4</option>
+    </select>
+
+    <label for="urlInput">Set URL:</label>
+    <input type="text" id="urlInput" placeholder="example.com or full URL" />
+    <button id="applyUrl">Load URL</button>
+
+    <div class="row">
+      <button id="zoomIn">Zoom +</button>
+      <button id="zoomOut">Zoom -</button>
+    </div>
+
+    <div class="row">
+      <button id="reset">Reset to Google</button>
+      <button id="reload">Reload</button>
+    </div>
+  </div>
+
+  <script src="control.js"></script>
+</body>
+</html>
