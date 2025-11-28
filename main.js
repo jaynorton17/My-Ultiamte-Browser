@@ -1,5 +1,5 @@
 
-const { app, BrowserWindow, BrowserView, ipcMain, Menu } = require("electron");
+const { app, BrowserWindow, BrowserView, ipcMain, Menu, screen } = require("electron");
 const sessionManager = require("./sessionManager");
 
 let mainWindow;
@@ -8,6 +8,9 @@ let views = [];
 let currentUrls = [];
 let zoomFactors = [];
 let screenCount = 4;
+let clickerRunning = false;
+let clickTimers = [];
+let captureInProgress = false;
 
 // remove native app menu
 Menu.setApplicationMenu(null);
@@ -190,7 +193,7 @@ function recreateViews() {
 function createControlWindow() {
   controlWindow = new BrowserWindow({
     width: 260,
-    height: 420,
+    height: 520,
     x: 0,
     y: 100,
     alwaysOnTop: true,
@@ -204,6 +207,146 @@ function createControlWindow() {
   });
 
   controlWindow.loadFile("control.html");
+}
+
+function stopClicker() {
+  clickTimers.forEach((timer) => clearInterval(timer));
+  clickTimers = [];
+  clickerRunning = false;
+  if (controlWindow && !controlWindow.isDestroyed()) {
+    controlWindow.webContents.send("clicker-status", { running: false });
+  }
+}
+
+function dispatchClick(action) {
+  if (!mainWindow || action == null) return;
+  const targetView = views.find((view) => {
+    const bounds = view.getBounds();
+    return (
+      action.x >= bounds.x &&
+      action.x <= bounds.x + bounds.width &&
+      action.y >= bounds.y &&
+      action.y <= bounds.y + bounds.height
+    );
+  });
+
+  if (targetView) {
+    const bounds = targetView.getBounds();
+    const localX = action.x - bounds.x;
+    const localY = action.y - bounds.y;
+    targetView.webContents.sendInputEvent({
+      type: "mouseDown",
+      x: localX,
+      y: localY,
+      button: "left",
+      clickCount: 1
+    });
+    targetView.webContents.sendInputEvent({
+      type: "mouseUp",
+      x: localX,
+      y: localY,
+      button: "left",
+      clickCount: 1
+    });
+    return;
+  }
+
+  mainWindow.webContents.sendInputEvent({
+    type: "mouseDown",
+    x: action.x,
+    y: action.y,
+    button: "left",
+    clickCount: 1
+  });
+  mainWindow.webContents.sendInputEvent({
+    type: "mouseUp",
+    x: action.x,
+    y: action.y,
+    button: "left",
+    clickCount: 1
+  });
+}
+
+function startClicker(actions) {
+  stopClicker();
+  if (!Array.isArray(actions) || !actions.length) return;
+
+  actions.forEach((action) => {
+    const interval = Math.max(50, parseInt(action.intervalMs, 10) || 1000);
+    const repetitions = Math.max(0, parseInt(action.repetitions, 10) || 0);
+
+    let performed = 0;
+    const run = () => {
+      dispatchClick(action);
+      performed += 1;
+      if (repetitions > 0 && performed >= repetitions) {
+        return true;
+      }
+      return false;
+    };
+
+    if (run() && repetitions === 1) return;
+
+    const timer = setInterval(() => {
+      const finished = run();
+      if (finished) {
+        clearInterval(timer);
+        clickTimers = clickTimers.filter((t) => t !== timer);
+        if (!clickTimers.length && controlWindow && !controlWindow.isDestroyed()) {
+          clickerRunning = false;
+          controlWindow.webContents.send("clicker-status", { running: false });
+        }
+      }
+    }, interval);
+
+    clickTimers.push(timer);
+  });
+
+  if (clickTimers.length) {
+    clickerRunning = true;
+    if (controlWindow && !controlWindow.isDestroyed()) {
+      controlWindow.webContents.send("clicker-status", { running: true });
+    }
+  }
+}
+
+function captureClickLocation() {
+  if (!mainWindow || captureInProgress) return Promise.resolve(null);
+  captureInProgress = true;
+
+  return new Promise((resolve) => {
+    const targets = [mainWindow.webContents, ...views.map((v) => v.webContents)];
+    const done = (payload) => {
+      captureInProgress = false;
+      targets.forEach((wc) => wc && wc.removeListener("before-input-event", handler));
+      if (controlWindow && !controlWindow.isDestroyed()) {
+        controlWindow.restore();
+        controlWindow.focus();
+      }
+      resolve(payload);
+    };
+
+    const handler = (event, input) => {
+      if (input.type !== "mouseDown") return;
+      const cursor = screen.getCursorScreenPoint();
+      const mainBounds = mainWindow.getBounds();
+      const relative = {
+        x: cursor.x - mainBounds.x,
+        y: cursor.y - mainBounds.y
+      };
+      done(relative);
+    };
+
+    targets.forEach((wc) => wc && wc.on("before-input-event", handler));
+
+    if (controlWindow && !controlWindow.isDestroyed()) {
+      controlWindow.minimize();
+    }
+
+    setTimeout(() => {
+      if (captureInProgress) done(null);
+    }, 15000);
+  });
 }
 
 // IPC from control panel
@@ -251,6 +394,18 @@ ipcMain.on("set-url", (event, payload) => {
   currentUrls[i] = finalUrl;
   safeLoad(views[i], finalUrl, i);
   sessionManager.saveSession({ screenCount, screens: currentUrls });
+});
+
+ipcMain.handle("capture-click", async () => {
+  return captureClickLocation();
+});
+
+ipcMain.on("start-clicker", (event, actions) => {
+  startClicker(actions);
+});
+
+ipcMain.on("stop-clicker", () => {
+  stopClicker();
 });
 
 app.whenReady().then(() => {
